@@ -1,14 +1,16 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  BsEmojiSmile,
   BsFillArrowUpSquareFill,
   BsFillArrowDownSquareFill,
 } from 'react-icons/bs';
-
-import { BigNumberCard, CardHIP, CardHPP, CardHEI } from '../../components';
+import {
+  BigNumberCard,
+  CardHIP,
+  CardHPP,
+  CardHEI,
+} from '../../components';
 
 import './summary.css';
 

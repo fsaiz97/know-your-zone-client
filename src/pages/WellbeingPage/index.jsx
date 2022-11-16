@@ -1,6 +1,6 @@
-import { CardHPP, CardWellbeing, InnerNav } from '../../components';
-import './wellbeing.css';
-import { useState, useEffect } from 'react';
+import { CardHPP, CardWellbeing } from "../../components";
+import "./wellbeing.css";
+import { useState, useEffect } from "react";
 
 import { motion, AnimatePresence } from 'framer-motion';
 

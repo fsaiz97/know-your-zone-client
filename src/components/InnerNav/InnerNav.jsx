@@ -1,5 +1,5 @@
 import { React } from "react";
-import { InnerNavTab } from "../";
+import InnerNavTab from "../InnerNavTab";
 
 const InnerNav = () => {
   return (

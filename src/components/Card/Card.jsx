@@ -1,5 +1,3 @@
-//import { DataVisualisation } from '../../components';
-
 const Card = ({
   value,
   className,

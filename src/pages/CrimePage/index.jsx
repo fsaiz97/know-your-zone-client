@@ -1,6 +1,10 @@
-import { BigNumberCard, CardHIP, CardHP } from "../../components";
-import "./crimePage.css";
-import { useState, useEffect } from "react";
+import {
+  BigNumberCard,
+  CardHIP,
+  CardHP
+} from '../../components';
+import './crimePage.css';
+import { useState, useEffect } from 'react';
 
 import { motion, AnimatePresence } from "framer-motion";
 

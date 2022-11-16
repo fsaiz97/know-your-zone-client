@@ -1,12 +1,12 @@
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+
 import {
   BigNumberCard,
   CardHIP,
   CardHP
 } from '../../components';
 import './rentPage.css';
-import { useState, useEffect } from 'react';
-
-import { motion, AnimatePresence } from "framer-motion";
 
 export default function RentPage({ navSearchSearching, motto }) {
   const [isLoading, setIsLoading] = useState(true);

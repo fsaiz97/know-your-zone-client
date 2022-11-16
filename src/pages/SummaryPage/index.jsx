@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
 import {
   BsFillArrowUpSquareFill,
   BsFillArrowDownSquareFill,
 } from 'react-icons/bs';
+import { motion, AnimatePresence } from 'framer-motion';
+
 import {
   BigNumberCard,
   CardHIP,

@@ -1,12 +1,12 @@
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+
 import {
   BigNumberCard,
   CardHIP,
   CardHP
 } from '../../components';
 import './crimePage.css';
-import { useState, useEffect } from 'react';
-
-import { motion, AnimatePresence } from "framer-motion";
 
 export default function SummaryPage({ navSearchSearching, motto }) {
   const [isLoading, setIsLoading] = useState(true);

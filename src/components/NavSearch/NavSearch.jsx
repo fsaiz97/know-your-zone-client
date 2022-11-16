@@ -1,8 +1,6 @@
-import { useRef, useState } from 'react';
-
-import { FaSearch } from 'react-icons/fa';
-
-import { useNavigate } from 'react-router-dom';
+import { useRef, useState } from "react";
+import { FaSearch } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 function NavSearch({ setNavSearchSearching }) {
   const searchInputRef = useRef();

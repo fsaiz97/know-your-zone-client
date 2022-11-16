@@ -1,8 +1,8 @@
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
 import { CardHPP, CardWellbeing } from "../../components";
 import "./wellbeing.css";
-import { useState, useEffect } from "react";
-
-import { motion, AnimatePresence } from "framer-motion";
 
 export default function WellbeingPage({ navSearchSearching, motto }) {
   const [isLoading, setIsLoading] = useState(true);

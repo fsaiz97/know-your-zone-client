@@ -1,6 +1,7 @@
 import { useState } from "react";
-import NavSearch from "../NavSearch";
 import { Outlet, NavLink } from "react-router-dom";
+
+import NavSearch from "../NavSearch";
 
 function Navbar({ setNavSearchSearching }) {
   const [hamburger, setHamburger] = useState(false);

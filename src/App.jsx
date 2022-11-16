@@ -1,19 +1,17 @@
-import './normalize.css';
-import './styles.css';
+import { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 
 import {
-  RentPage,
-  HomePage,
-  FAQPage,
-  SummaryPage,
-  CrimePage,
-  DemographicsPage,
-  WellbeingPage,
-  NotFoundPage,
+    RentPage,
+    HomePage,
+    FAQPage,
+    SummaryPage,
+    CrimePage,
+    DemographicsPage,
+    WellbeingPage,
+    NotFoundPage,
 } from './pages';
 import { Navbar, PageWrapper } from './components';
-import { Routes, Route } from 'react-router-dom';
-import { useState } from 'react';
 
 function App() {
   const [navSearchSearching, setNavSearchSearching] = useState(false);

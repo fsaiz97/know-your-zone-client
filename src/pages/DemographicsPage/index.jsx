@@ -1,9 +1,10 @@
-import { CardHP, CardHPP, CardHPH, CardHIP } from '../../components';
-import './demoPage.css';
 import { useState, useEffect } from 'react';
-import greetings from '../../assets/greetings';
-
 import { motion, AnimatePresence } from 'framer-motion';
+
+import { CardHP, CardHPP, CardHPH, CardHIP } from '../../components';
+import greetings from '../../assets/greetings';
+import './demoPage.css';
+
 
 export default function DemographicsPage({ navSearchSearching, motto }) {
   const [isLoading, setIsLoading] = useState(true);

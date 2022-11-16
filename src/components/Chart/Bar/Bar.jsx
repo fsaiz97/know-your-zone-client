@@ -1,9 +1,16 @@
-import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip} from 'chart.js';
-import { Bar } from 'react-chartjs-2'
+import {
+    Chart as ChartJS,
+    CategoryScale,
+    LinearScale,
+    BarElement,
+    Title,
+    Tooltip
+} from 'chart.js';
+import {Bar} from 'react-chartjs-2'
 
-ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip );
+ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip);
 
-const BarPlot = ({ chartData }) => {
+const BarPlot = ({chartData}) => {
     return (
 
         <Bar
@@ -36,9 +43,9 @@ const BarPlot = ({ chartData }) => {
                 }
             }
           }}
-        />
-    
+          />
+
     );
-  };
-  
-  export default BarPlot;
+};
+
+export default BarPlot;

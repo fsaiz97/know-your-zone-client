@@ -1,6 +1,7 @@
-import { InnerNav } from '../../components';
 import { useState, useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
+
+import InnerNav from '../InnerNav';
 
 function PageWrapper({ motto, navSearchSearching, setMotto }) {
   const [isLoading, setIsLoading] = useState(true);

@@ -1,7 +1,7 @@
 import { SkylineContainer, London } from "../../components";
 import "./homepage.css";
 
-function HomePage({ setBoroughName }) {
+export default function HomePage({ setBoroughName }) {
   return (
     <>
       <div className="hero-container">
@@ -14,5 +14,3 @@ function HomePage({ setBoroughName }) {
     </>
   );
 }
-
-export default HomePage;

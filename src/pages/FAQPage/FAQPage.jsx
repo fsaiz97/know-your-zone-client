@@ -1,5 +1,5 @@
 import './faq.css';
-function FAQPage() {
+export default function FAQPage() {
   return (
     <div className='faq-page'>
       <h1>About 'Know Your Zone'</h1>
@@ -123,5 +123,3 @@ function FAQPage() {
     </div>
   );
 }
-
-export default FAQPage;

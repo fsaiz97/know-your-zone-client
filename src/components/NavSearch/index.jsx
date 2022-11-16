@@ -1,3 +1,1 @@
-import NavSearch from "./NavSearch";
-
-export default NavSearch;
+export { default } from "./NavSearch";

@@ -1,6 +1,6 @@
-export { default as CrimePage } from "../pages/CrimePage";
-export { default as SummaryPage } from "../pages/SummaryPage";
-export { default as RentPage } from "../pages/RentPage";
+export { default as CrimePage } from "./CrimePage";
+export { default as SummaryPage } from "./SummaryPage";
+export { default as RentPage } from "./RentPage";
 export { default as HomePage } from "./HomePage";
 export { default as FAQPage } from "./FAQPage";
 export { default as DemographicsPage } from "./DemographicsPage";

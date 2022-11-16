@@ -1,3 +1,1 @@
-import Skyline from "./Skyline";
-
-export default Skyline;
+export { default } from "./Skyline";

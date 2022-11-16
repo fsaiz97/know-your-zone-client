@@ -1,3 +1,1 @@
-import CardHEI from "./CardHEI";
-
-export default CardHEI;
+export { default } from "./CardHEI";

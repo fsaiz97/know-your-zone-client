@@ -1,4 +1,4 @@
-function FAQPage() {
+export default function FAQPage() {
   return (
     <div>
       <h1>About 'Know Your Zone'</h1>
@@ -16,5 +16,3 @@ function FAQPage() {
     </div>
   );
 }
-
-export default FAQPage;

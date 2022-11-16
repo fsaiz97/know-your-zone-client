@@ -1,9 +1,7 @@
 import {
   BigNumberCard,
   CardHIP,
-  CardHP,
-  Navbar,
-  InnerNav,
+  CardHP
 } from '../../components';
 import './crimePage.css';
 import { useState, useEffect } from 'react';

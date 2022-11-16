@@ -1,9 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  BsEmojiSmile,
   BsFillArrowUpSquareFill,
   BsFillArrowDownSquareFill,
 } from 'react-icons/bs';
@@ -12,9 +10,6 @@ import {
   CardHIP,
   CardHPP,
   CardHEI,
-  Navbar,
-  Container,
-  InnerNav,
 } from '../../components';
 
 import './summary.css';

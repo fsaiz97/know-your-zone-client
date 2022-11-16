@@ -1,4 +1,4 @@
-import { CardHPP, CardWellbeing, InnerNav } from "../../components";
+import { CardHPP, CardWellbeing } from "../../components";
 import "./wellbeing.css";
 import { useState, useEffect } from "react";
 

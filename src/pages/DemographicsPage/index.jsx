@@ -1,4 +1,4 @@
-import { CardHP, CardHPP, CardHPH, CardHIP, InnerNav } from '../../components';
+import { CardHP, CardHPP, CardHPH, CardHIP } from '../../components';
 import './demoPage.css';
 import { useState, useEffect } from 'react';
 import greetings from '../../assets/greetings';

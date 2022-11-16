@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { createBrowserRouter } from 'react-router-dom';
 
 import Chart from '../Chart';
 

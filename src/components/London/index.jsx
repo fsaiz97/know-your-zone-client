@@ -1,3 +1,1 @@
-import London from "./London";
-
-export default London;
+export { default } from "./London";

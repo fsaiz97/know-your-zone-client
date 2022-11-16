@@ -1,3 +1,1 @@
-import SkylineContainer from "./SkylineContainer";
-
-export default SkylineContainer;
+export { default } from "./SkylineContainer";

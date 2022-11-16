@@ -1,22 +1,18 @@
-export { default as InnerNav } from "../components/InnerNav";
-export { default as InnerNavTab } from "../components/InnerNavTab";
-
-export { default as Card } from "../components/Card";
-export { default as DataVisualisation } from "../components/DataVisualisation";
-export { default as BigNumberCard } from "../components/BigNumberCard";
-export { default as CardHIP } from "../components/CardHIP";
-export { default as CardHP } from "../components/CardHP";
-export { default as CardHPH } from "../components/CardHPH";
-export { default as CardHPP } from "../components/CardHPP";
+export { default as InnerNav } from "./InnerNav";
+export { default as InnerNavTab } from "./InnerNavTab";
+export { default as Card } from "./Card";
+export { default as DataVisualisation } from "./DataVisualisation";
+export { default as BigNumberCard } from "./BigNumberCard";
+export { default as CardHIP } from "./CardHIP";
+export { default as CardHP } from "./CardHP";
+export { default as CardHPH } from "./CardHPH";
+export { default as CardHPP } from "./CardHPP";
 export { default as CardHEI } from "./CardHEI";
-export { default as CardWellbeing } from "../components/CardWellbeing";
-export { default as PageWrapper } from "../components/PageWrapper";
-
-import Navbar from "./Navbar";
-import Search from "./Search";
-import Skyline from "./Skyline";
-import SkylineContainer from "./SkylineContainer";
-import London from "./London";
-import NavSearch from "./NavSearch";
-
-export { Navbar, Search, Skyline, SkylineContainer, London, NavSearch };
+export { default as CardWellbeing } from "./CardWellbeing";
+export { default as PageWrapper } from "./PageWrapper";
+export { default as Navbar } from "./Navbar";
+export { default as Search } from "./Search";
+export { default as Skyline } from "./Skyline";
+export { default as SkylineContainer } from "./SkylineContainer";
+export { default as London } from "./London";
+export { default as NavSearch } from "./NavSearch";

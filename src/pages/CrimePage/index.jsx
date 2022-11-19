@@ -8,7 +8,7 @@ import {
 } from '../../components';
 import './crimePage.css';
 
-export default function SummaryPage({ navSearchSearching, motto }) {
+export default function CrimePage({ navSearchSearching }) {
   const [isLoading, setIsLoading] = useState(true);
   const [crimeData, setCrimeData] = useState([]);
   const [crimeStats, setCrimeStats] = useState([]);
@@ -44,14 +44,14 @@ export default function SummaryPage({ navSearchSearching, motto }) {
     "2022-06",
     "2022-07",
     "2022-08",
-    "2022-09",
+    "2022-09"
   ];
 
   const londonCrimeRate = [
     7.48162375, 6.78606826, 6.28630808, 5.52838738, 5.49337902, 6.5864996,
     6.49625348, 7.09590281, 7.33509172, 7.443995, 7.05774997, 7.36244856,
     7.96199307, 7.78275861, 7.05533922, 7.17168439, 6.898116, 7.69848697,
-    7.1771348, 7.9181802, 7.66169674, 7.86514357, 7.68611874, 7.27408911,
+    7.1771348, 7.9181802, 7.66169674, 7.86514357, 7.68611874, 7.27408911
   ];
 
   const londonBarLabels = [
@@ -65,14 +65,13 @@ export default function SummaryPage({ navSearchSearching, motto }) {
     'Vehicle Offences',
     'Miscellaneous Crimes Against Society',
     'Possession of Weapons',
-    'Public Order Offences',
+    'Public Order Offences'
   ];
   const londonBarData = [
-    1684, 805, 7594, 7059, 831, 1683, 1420, 3405, 332, 196, 1869,
+    1684, 805, 7594, 7059, 831, 1683, 1420, 3405, 332, 196, 1869
   ];
 
 
-  //For later use - fetch request example
   // Get saved data from sessionStorage
   let boroughName = sessionStorage.getItem("borough");
   useEffect(() => {
@@ -81,8 +80,13 @@ export default function SummaryPage({ navSearchSearching, motto }) {
       const response = await fetch(
         `http://localhost:3000/crime/${boroughName}/average/history`
       );
-
       const rawData = await response.json();
+
+      setCrimeData(rawData);
+      setCrimeRateBiannual(
+        rawData.slice(0, 6).reduce((prev, curr) => curr.crime_rate + prev, 0) / 6
+      );
+
       const options = {
         method: "POST",
         headers: {
@@ -94,7 +98,6 @@ export default function SummaryPage({ navSearchSearching, motto }) {
             "Burglary",
             "Sexual Offences",
             "Violence Against the Person",
-
             "Theft",
             "Robbery",
             "Arson and Criminal Damage",
@@ -102,7 +105,7 @@ export default function SummaryPage({ navSearchSearching, motto }) {
             "Vehicle Offences",
             "Miscellaneous Crimes Against Society",
             "Possession of Weapons",
-            "Public Order Offences",
+            "Public Order Offences"
           ],
         }),
       };
@@ -111,15 +114,9 @@ export default function SummaryPage({ navSearchSearching, motto }) {
         options
       );
       const crimeDataResponse = await crimeReponse.json();
-      setCrimeData(rawData);
-      setCrimeRateBiannual(
-        rawData.slice(5).reduce((prev, curr) => curr.crime_rate + prev, 0) / 6
-      );
+
       setCrimeStats(crimeDataResponse);
-      setCrimeRateBiannual(
-        rawData.slice(0, 6).reduce((prev, curr) => curr.crime_rate + prev, 0) /
-          6
-      );
+      
       setIsLoading(false);
     }
 
@@ -137,32 +134,29 @@ export default function SummaryPage({ navSearchSearching, motto }) {
         >
           <CardHIP
             className={"right-column card yellow"}
-            imageSrc={
-              "https://media-exp1.licdn.com/dms/image/C4E03AQFrCxt_gF8mPg/profile-displayphoto-shrink_800_800/0/1651744010490?e=1672876800&v=beta&t=eIRIryxgQ8MbQ5mc48UxVru8looxGUh0Pj3suahLJLA"
-            }
             heading={"Difference in Crime Counts for the Past Year"}
             dataResponse={crimeStats}
             chartType={'bar'}
-            londonBarData={londonBarData}
-            londonBarLabels={londonBarLabels}
-            xAxisTitle={xAxisBarTitle}
-            yAxisTitle={yAxisBarTitle}
             secondaryInfo={
               "Hover over the bars to see the difference in crime counts between this borough and the average for all London boroughs"
             }
+            londonBarLabels={londonBarLabels}
+            londonBarData={londonBarData}
+            xAxisTitle={xAxisBarTitle}
+            yAxisTitle={yAxisBarTitle}
           />
           <CardHIP
-            heading={"Monthly crime rate"}
             className={"left-column card yellow"}
+            heading={"Monthly crime rate"}
             dataResponse={crimeData.reverse().map((elem) => elem.crime_rate)}
             chartType={'line'}
-            xAxisTitle={xAxisLineTitle}
-            yAxisTitle={yAxisLineTitle}
-            londonLabels={londonLabels}
-            londonData={londonCrimeRate}
             secondaryInfo={
               "Hover over the markers to see the monthly crime rate in both this borough and London for the last 2 years"
             }
+            londonLabels={londonLabels}
+            londonData={londonCrimeRate}
+            xAxisTitle={xAxisLineTitle}
+            yAxisTitle={yAxisLineTitle}
           />
           <div className="three-tile-wrapper right-column">
             <p className="card-heading last-year">In the Last Year</p>
@@ -185,24 +179,13 @@ export default function SummaryPage({ navSearchSearching, motto }) {
             </div>
           </div>
           <BigNumberCard
-            className={"left-column card navy"}
             value={`${crimeRateBiannual.toFixed(2)}`}
-            smallNumber={"/1000"}
+            className={"left-column card navy"}
             secondaryInfo={"Average crime rate for the last 6 months"}
+            smallNumber={"/1000"}
           />
         </motion.div>
       </AnimatePresence>
     );
-  } // else {
-  //   return (
-  //     <div className="page-wrapper">
-  //       <h1>Borough Info is loading...</h1>
-  //       <h3 className="motto">
-  //         <em>"We Serve"</em>
-  //       </h3>
-  //       <InnerNav />
-  //       <div className="wellbeing-wrapper"></div>
-  //     </div>
-  //   );
-  // }
+  }
 }

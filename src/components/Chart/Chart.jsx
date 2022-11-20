@@ -2,7 +2,12 @@ import Donut from "./Donut";
 import LinePlot from "./Line";
 import BarPlot from "./Bar";
 
-const Chart = ({ chartType, chartData, xAxisTitle, yAxisTitle }) => {
+const Chart = ({
+  chartType,
+  chartData,
+  xAxisTitle,
+  yAxisTitle
+}) => {
   if (chartType === "donut") {
     return (
       <div className="data-img">

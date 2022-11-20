@@ -1,4 +1,9 @@
-const CardHPP = ({ className, heading, primaryInfo, secondaryInfo }) => {
+const CardHPP = ({
+  className,
+  heading,
+  primaryInfo,
+  secondaryInfo
+}) => {
   return (
     <div className={`${className} card`}>
       <h3 className="card-heading">{heading}</h3>

@@ -3,7 +3,11 @@ import { Outlet, useNavigate } from 'react-router-dom';
 
 import InnerNav from '../InnerNav';
 
-function PageWrapper({ motto, navSearchSearching, setMotto }) {
+function PageWrapper({
+  motto,
+  navSearchSearching,
+  setMotto
+}) {
   const [isLoading, setIsLoading] = useState(true);
   const [boroughData, setBoroughData] = useState([]);
   const [boroughFound, setBoroughFound] = useState(true);

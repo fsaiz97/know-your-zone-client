@@ -10,7 +10,11 @@ import {Bar} from 'react-chartjs-2'
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip);
 
-const BarPlot = ({ chartData, xAxisTitle, yAxisTitle }) => {
+const BarPlot = ({
+  chartData,
+  xAxisTitle,
+  yAxisTitle
+}) => {
     return (
 
         <Bar

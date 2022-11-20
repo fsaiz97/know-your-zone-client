@@ -1,4 +1,9 @@
-const CardHEI = ({ className, heading, emoji, secondaryInfo }) => {
+const CardHEI = ({
+  className,
+  heading,
+  emoji,
+  secondaryInfo
+}) => {
   return (
     <div className={`${className} card`}>
       <h3 className="card-heading">{heading}</h3>

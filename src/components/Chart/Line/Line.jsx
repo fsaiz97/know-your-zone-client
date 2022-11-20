@@ -20,7 +20,11 @@ ChartJS.register(
   Legend
 );
 
-const LinePlot = ({ chartData, xAxisTitle, yAxisTitle }) => {
+const LinePlot = ({
+  chartData,
+  xAxisTitle,
+  yAxisTitle
+}) => {
   return (
     <Line 
 

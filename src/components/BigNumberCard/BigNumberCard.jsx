@@ -1,9 +1,9 @@
 const BigNumberCard = ({
-  value,
   className,
-  secondaryInfo,
-  smallNumber,
   heading,
+  value,
+  smallNumber,
+  secondaryInfo
 }) => {
   return (
     <div className={`${className} card`}>

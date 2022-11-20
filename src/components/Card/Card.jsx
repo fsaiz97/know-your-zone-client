@@ -1,13 +1,12 @@
 const Card = ({
-  value,
   className,
   heading,
-  primaryInfo,
-  imageSrc,
-  altImageText,
-  secondaryInfo,
   bigNumber,
   smallNumber,
+  primaryInfo,
+  secondaryInfo,
+  imageSrc,
+  altImageText
 }) => {
   return (
     <div className={`${className} card`}>

@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import {
   BsFillArrowUpSquareFill,
   BsFillArrowDownSquareFill,
@@ -19,9 +18,8 @@ export default function SummaryPage({ navSearchSearching }) {
   const [isLoading, setIsLoading] = useState(true);
   const [boroughData, setBoroughData] = useState([]);
   const [wellbeingScore, setWellbeingScore] = useState(0);
-  const [boroughFound, setBoroughFound] = useState(true);
+  // const [boroughFound, setBoroughFound] = useState(true); // TODO - Check if this can be used in code
   const [dataVisualisationdData, setDataVisualisationData] = useState([]);
-  const navigate = useNavigate();
   //For later use - fetch request example
   // Get saved data from sessionStorage
   let boroughName = sessionStorage.getItem('borough');
@@ -40,8 +38,6 @@ export default function SummaryPage({ navSearchSearching }) {
         );
         const visualisationPoints = await dataVisualisation.json();
         setDataVisualisationData(visualisationPoints);
-        // setMotto(rawData['motto']);
-        // console.log('raw data', rawData);
 
         const wellbeingResponse = await fetch(
           `http://localhost:3000/demographics/${boroughName}/wellbeing`
@@ -51,11 +47,7 @@ export default function SummaryPage({ navSearchSearching }) {
 
         setIsLoading(false);
       } catch (err) {
-        console.log(err);
-
-        // setTimeout(() => {
-        //   navigate('/');
-        // }, 5000);
+        console.log(err)
       }
     }
     getBoroughInfo();
@@ -130,26 +122,5 @@ export default function SummaryPage({ navSearchSearching }) {
         </motion.div>
       </AnimatePresence>
     );
-  } // else {
-  //   return (
-  //     <div className="page-wrapper">
-  //       <h1>Borough Info is loading...</h1>
-  //       <h3 className="motto">
-  //         <em>"We Serve"</em>
-  //       </h3>
-  //       <InnerNav />
-  //       <div className="wellbeing-wrapper"></div>
-  //     </div>
-  //   );
-  // }
+  }
 }
-
-// {
-//   `${
-//     wellbeingScore > 7.3 ? (
-//       <FontAwesomeIcon icon='fa-regular fa-face-smile-beam' />
-//     ) : (
-//       '🙂'
-//     )
-//   }`;
-// }

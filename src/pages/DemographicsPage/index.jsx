@@ -210,16 +210,5 @@ export default function DemographicsPage({ navSearchSearching }) {
         </div>
       </AnimatePresence>
     );
-  } // else {
-  //   return (
-  //     <div className="page-wrapper">
-  //       <h1>Borough Info is loading...</h1>
-  //       <h3 className="motto">
-  //         <em>"We Serve"</em>
-  //       </h3>
-  //       <InnerNav />
-  //       <div className="wellbeing-wrapper"></div>
-  //     </div>
-  //   );
-  // }
+  }
 }

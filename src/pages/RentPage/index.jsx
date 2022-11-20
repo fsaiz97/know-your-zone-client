@@ -67,30 +67,26 @@ export default function RentPage({ navSearchSearching, motto }) {
         >
           <CardHIP
             className={"left-column card blue rent-item-1"}
-            imageSrc={
-              "https://media-exp1.licdn.com/dms/image/C4E03AQFrCxt_gF8mPg/profile-displayphoto-shrink_800_800/0/1651744010490?e=1672876800&v=beta&t=eIRIryxgQ8MbQ5mc48UxVru8looxGUh0Pj3suahLJLA"
-            }
-            altImageText={"Gantt Chart"}
             heading={"Median Rent"}
+            dataResponse={rentHistory.reverse().map((elem) => elem.rent_median)}
+            chartType={"line"}
             secondaryInfo={
               "Median rent paid across all house types for the last 4 years"
             }
-            chartType={"line"}
             londonLabels={londonLabels}
-            dataResponse={rentHistory.reverse().map((elem) => elem.rent_median)}
             xAxisTitle={xAxisLineTitle}
             yAxisTitle={yAxisLineTitle}
           />
           <CardHIP
             className={'right-column card blue rent-item-2'}
-            chartType={'bar'}
+            heading={'Difference in Rent Prices Over Past Year'}
             dataResponse={generalRent}
+            chartType={'bar'}
+            secondaryInfo={'Hover over the bars to see the difference in rent prices for each accommodation type between this borough and the London average'}
             londonBarLabels={londonBarLabels}
             londonBarData={londonBarData}
             xAxisTitle={xAxisBarTitle}
             yAxisTitle={yAxisBarTitle}
-            heading={'Difference in Rent Prices Over Past Year'}
-            secondaryInfo={'Hover over the bars to see the difference in rent prices for each accommodation type between this borough and the London average'}
           />
 
           <BigNumberCard

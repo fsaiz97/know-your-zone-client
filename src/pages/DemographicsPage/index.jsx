@@ -167,18 +167,15 @@ export default function DemographicsPage({ navSearchSearching }) {
             <CardHIP
               className={"blue six-tile house-type"}
               heading={"Household Composition"}
-              chartType={"donut"}
               dataResponse={houseData}
+              chartType={"donut"}
               secondaryInfo={`Hover over the chart slices to find out the different types of households you can expect to find in the borough of ${boroughName}.`}
-              imageSrc={
-                "https://www.formula1.com/content/dam/fom-website/sutton/2022/Italy/Sunday/1422823415.jpg"
-              }
             />
             <CardHIP
               className={"yellow six-tile"}
               heading={"Population of people following each faith"}
-              chartType={"donut"}
               dataResponse={allData[0]}
+              chartType={"donut"}
               secondaryInfo={`The largest religious group identify as ${biggestReligion()}. However, expect to see ${
                 summaryData["expect"]
               } `}
@@ -186,8 +183,8 @@ export default function DemographicsPage({ navSearchSearching }) {
             <CardHPH
               className={"pink six-tile"}
               heading={"Language"}
-              secondaryInfo={`The majority of people speak English but did you know that the second most commonly spoken language in ${allData[0]["borough_name"]} is ${summaryData["second_lang"]}?`}
               primaryInfo={`${getGreeting(summaryData["second_lang"])} 👋`}
+              secondaryInfo={`The majority of people speak English but did you know that the second most commonly spoken language in ${allData[0]["borough_name"]} is ${summaryData["second_lang"]}?`}
             />
             <CardHPP
               className={"blue six-tile age"}

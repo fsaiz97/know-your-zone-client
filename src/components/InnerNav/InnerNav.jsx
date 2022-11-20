@@ -1,5 +1,3 @@
-import { React } from "react";
-
 import InnerNavTab from "../InnerNavTab";
 
 const InnerNav = () => {
@@ -37,14 +35,3 @@ const InnerNav = () => {
 };
 
 export default InnerNav;
-
-/* <NavLink>Summary</NavLink>
-<NavLink>Rent Prices</NavLink>
-<NavLink>Crime</NavLink>
-<NavLink>Wellbeing</NavLink>
-<NavLink>Demographics</NavLink> */
-
-// style={({ isActive }) => ({
-//     color: isActive ? "#191f38" : "#fceef0",
-//     background: isActive ? "#fceef0" : "#191f38",
-//   })}

@@ -77,8 +77,7 @@ const CardHIP = ({
 
     let values = [];
     let labels = [];
-   
-    console.log(dataResponse)
+ 
     if (dataResponse[1].hasOwnProperty('offence_category')) {
       labels = londonBarLabels
       values = dataResponse.map(
@@ -133,7 +132,6 @@ const CardHIP = ({
     return (
       <div className={`${className} card`}>
         <h3 className="card-heading">{heading}</h3>
-        {/* {dataResponse === undefined || Object.keys(chartData).length === 0 ? null : <Chart chartData={chartData} />} */}
         {chartData === null ? null : (
           <Chart
             chartType={chartType}

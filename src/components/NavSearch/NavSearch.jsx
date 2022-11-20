@@ -54,11 +54,12 @@ function NavSearch({ setNavSearchSearching }) {
     );
   }
 
-  function searchClick(e) {
-    smallFilteredBoroughList[0] = e.target.id;
-    sessionStorage.setItem('borough', smallFilteredBoroughList[0]);
-    navigate(`/borough/summary`);
-  }
+  // TODO Investigate unused but potentially useful function searchClick
+  // function searchClick(e) {
+  //   smallFilteredBoroughList[0] = e.target.id;
+  //   sessionStorage.setItem('borough', smallFilteredBoroughList[0]);
+  //   navigate(`/borough/summary`);
+  // }
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -72,40 +73,7 @@ function NavSearch({ setNavSearchSearching }) {
     navigate(`/borough/summary`);
     searchInputRef.current.value = '';
   }
-
-  // if (smallFilteredBoroughList.length != 0) {
-  //   return (
-  //     <div className='small-search-container'>
-  //       <form className='small-form' onSubmit={handleSubmit}>
-  //         <input
-  //           className='small-input'
-  //           ref={searchInputRef}
-  //           type='text'
-  //           placeholder='Search...'
-  //           onChange={searchBoroughList}
-  //         />
-  //         <button type='submit' className='nav-search-btn'>
-  //           <FaSearch className='nav-search-icon' size={23} />
-  //         </button>
-  //       </form>
-  //       <div className='dropdown'>
-  //         {boroughList
-  //           .filter((borough) =>
-  //             borough.toLowerCase().includes(smallSearchQuery.toLowerCase())
-  //           )
-  //           .map((borough, key) => (
-  //             <a
-  //               className={`dropdown-row ${key}`}
-  //               id={borough}
-  //               onClick={searchClick}
-  //             >
-  //               {borough}
-  //             </a>
-  //           ))}
-  //       </div>
-  //     </div>
-  //   );
-  // } else {
+  
   return (
     <div className='small-search-container'>
       <form className='small-form' onSubmit={handleSubmit}>

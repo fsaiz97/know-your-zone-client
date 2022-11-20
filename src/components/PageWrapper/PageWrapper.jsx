@@ -8,14 +8,14 @@ function PageWrapper({
   navSearchSearching,
   setMotto
 }) {
-  const [isLoading, setIsLoading] = useState(true);
+  // const [isLoading, setIsLoading] = useState(true); // TODO - Investigate unused but potentially useful states and hooks
   const [boroughData, setBoroughData] = useState([]);
-  const [boroughFound, setBoroughFound] = useState(true);
+  // const [boroughFound, setBoroughFound] = useState(true); // TODO - Investigate unused but potentially useful states and hooks
   let boroughName = sessionStorage.getItem('borough');
-  const navigate = useNavigate();
+  // const navigate = useNavigate(); // TODO - Investigate unused but potentially useful states and hooks
   useEffect(() => {
     async function getBoroughInfo() {
-      setIsLoading(true);
+      // setIsLoading(true); // TODO - Investigate unused but potentially useful states and hooks
       try {
         const response = await fetch(
           `http://localhost:3000/summary/${boroughName}`
@@ -23,19 +23,16 @@ function PageWrapper({
         const rawData = await response.json();
         setBoroughData(rawData);
         setMotto(rawData['motto']);
-        setBoroughFound(true);
+        // setBoroughFound(true); // TODO - Investigate unused but potentially useful states and hooks
       } catch (err) {
         console.log(err);
-        setBoroughFound(false);
+        // setBoroughFound(false); // TODO - Investigate unused but potentially useful states and hooks
       }
     }
     getBoroughInfo();
   }, [navSearchSearching]);
 
-  // console.log('after', boroughFound);
-
   if (boroughData.borough_name) {
-    console.log('Found');
     return (
       <div className='page-wrapper'>
         <h1>{boroughData['borough_name']}</h1>

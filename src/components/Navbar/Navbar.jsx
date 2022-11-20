@@ -95,7 +95,6 @@ function Navbar({ setNavSearchSearching }) {
 
               <NavSearch setNavSearchSearching={setNavSearchSearching} />
             </ul>
-
             <div className={`hamburger ${stateCheck}`} onClick={toggleMenu}>
               <span className="bar"></span>
               <span className="bar"></span>
@@ -103,7 +102,6 @@ function Navbar({ setNavSearchSearching }) {
             </div>
           </nav>
         </header>
-
         <Outlet />
       </>
     );

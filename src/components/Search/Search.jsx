@@ -52,7 +52,6 @@ function Search() {
         borough.toLowerCase().includes(searchQuery.toLowerCase())
       )
     );
-    console.log(filteredBoroughList.length);
   }
 
   function searchClick(e) {
@@ -68,7 +67,6 @@ function Search() {
 
     // Save data to sessionStorage
     sessionStorage.setItem('borough', filteredBoroughList[0]);
-    console.log('submit', filteredBoroughList);
     if (filteredBoroughList.length != 0) {
       navigate(`/borough/summary`);
     } else {

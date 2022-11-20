@@ -4,7 +4,7 @@ const CardWellbeing = ({ className }) => {
       <h3 className='card-heading'>Tips to improve your wellbeing</h3>
       <p className='wellbeing-info'>
         Personal wellbeing is just that, personal. If your zone has a lower
-        wellbeing score, here’s some things you can do to keep your wellbeing
+        wellbeing score, here's some things you can do to keep your wellbeing
         happy while you live there.
       </p>
       <strong>

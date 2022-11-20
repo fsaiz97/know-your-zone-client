@@ -27,7 +27,6 @@ const LinePlot = ({
 }) => {
   return (
     <Line 
-
       data={chartData} 
       options={{
         scales: {
@@ -64,9 +63,7 @@ const LinePlot = ({
             color: 'black'
           }
         } 
-        
       }}
-    
     />
   );
 };
